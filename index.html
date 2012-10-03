@@ -4,20 +4,24 @@
 	<meta charset="utf-8">
     <title>Bootstrap 101 Template</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<style>
       body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+	<link href="css/fullcalendar.css" rel="stylesheet" type="text/css"  />
+	<link href="css/unicorn.main.css" rel="stylesheet" type="text/css" />
+	<link href="css/custom.css" rel="stylesheet" type="text/css" />
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body>
-      <div class="navbar navbar-fixed-top">
+	<!-- Navbar -->
+    <div class="navbar navbar-fixed-top">	
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -26,35 +30,367 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="#">Test de Bootsrap</a>
-          <div class="nav-collapse collapse">
-			<p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
-            </p>
-            <ul class="nav">
-              <li class="active"><a href="#">Accueil</a></li>
-              <li><a href="#about">A propos</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+		  
+		<ul class="nav pull-right">
+			<li class="divider-vertical"></li>
+			<!-- Options -->
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="icon-wrench"></i> Options
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Paramètres du compte</a></li>
+					<li><a href="#">Paramètres de confidentialité</a></li>				  
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#"><i class="icon-off"></i> Déconnexion</a></li>
+				</ul>
+			</li>
+			<!-- END Options -->
+		</ul>
+		<ul class="nav">
+			<li class="divider-vertical"></li>
+			<li>
+				<form class="navbar-search pull-left">
+				  <input type="text" class="search-query" placeholder="Rechercher">
+				</form>
+			</li>
+			<li class="divider-vertical"></li>
+			<!-- Notifications -->
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Prénom + Nom (3)
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#"><i class="icon-bell"></i> Notification 1</a></li>
+					<li><a href="#"><i class="icon-bell"></i> Notification 2</a></li>
+					<li><a href="#"><i class="icon-bell"></i> Notification 3</a></li>
+				</ul>
+			</li>
+			<!-- END Notifications -->
+			<li class="divider-vertical"></li>
+			<!-- MessageBox -->
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="icon-envelope"></i> Messagerie (2)
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Nouveau message</a></li>
+					<li><a href="#">Boîte de réception (2)</a></li>
+					<li><a href="#">Rechercher un message</a></li>
+				</ul>
+			</li>
+			<!-- END MessageBox -->
+		</ul>
+          
         </div>
       </div>
     </div>
-
-    <div class="container-fluid">
-
-		<div class="row-fluid">
-			<div class="span3">
-				Left side
-			</div>
-			<div class="span9">
-				<h1>Bootstrap starter template</h1>
-				<p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
-			</div>
+	<!-- END Navbar -->
+	<div class="tabbable">
+		<!-- Tab nav -->
+		<div class="tabs-below tabs-shake">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab1" data-toggle="tab"><i class="icon-user"></i> Mon profil</a></li>
+				<li><a href="#tab2" data-toggle="tab"><i class="icon-bookmark"></i> Accueil</a></li>
+				<li><a href="#tab3" data-toggle="tab"><i class="icon-road"></i> Covoiturage</a></li>
+				<li><a href="#tab4" data-toggle="tab"><i class="icon-home"></i> Logements</a></li>
+				<li><a href="#tab5" data-toggle="tab"><i class="icon-shopping-cart"></i> Vente de biens</a></li>
+				<li><a href="#tab6" data-toggle="tab"><i class="icon-briefcase"></i> Stages</a></li>
+			</ul>
 		</div>
+		<!-- END Tab nav -->
+		<!-- Content -->
+		<div class="tab-content">
+			<!-- PROFILE -->
+			<div class="tab-pane active" id="tab1">
+				<div class="container-fluid">
+					<div class="row-fluid">
+						<div class="span3">
+							<div class="widget-box">
+								<div class="widget-title">
+									<span class="icon"><i class="icon-eye-open"></i></span>
+									<h5>Mes informations</h5>									
+								</div>
+								<div class="widget-content">
+									<p><img src="http://placehold.it/200x200/eee&text=Profile"></p>
+									<p><i class="icon-heart"></i> <strong>Status :</strong> Célibataire</p>
+									<p>
+										<i class="icon-film"></i> <strong>Centres d'intérêt :</strong> 
+										<span class="label label-success">Musique</span>
+										<span class="label label-success">Cinéma</span>
+										<span class="label label-success">Yoga</span>
+									</p>
+									<p class="text-warning">
+										 <i class="icon-thumbs-up"></i> <strong>Je suis recommandé par 35 personnes</strong>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="span9">
+							<div class="widget-box">
+								<div class="widget-title">
+									<span class="icon"><i class="icon-user"></i></span>
+									<h5>Mon profil</h5>									
+								</div>
+								<div class="widget-content">
+									<strong>Prénom Nom</strong><br />
+									01/01/2000<br />
+									Paris<br />
+									<span class="label">Ecole</span><br />
+									<span class="label label-info">Association 1</span> <span class="label label-info">Association 2</span><br />
+									06.01.02.03.04<br />
+								</div>
+							</div>
+							<div class="widget-box">
+								<div class="widget-title">
+									<span class="icon"><i class="icon-tags"></i></span>
+									<h5>Mes Annonces</h5>									
+								</div>
+								<div class="widget-content">
+									Annonces
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END PROFILE -->
+			<!-- HOME -->
+			<div class="tab-pane" id="tab2">
+				<div class="container-fluid">
+					<div class="row-fluid">
+						<div class="span12">
+							<!-- News -->
+							<div class="widget-box">
+								<div class="widget-title">
+									<span class="icon"><i class="icon-file"></i></span>
+									<h5>News</h5>
+									<!-- News nav-->
+									<div class="buttons">
+										<a href="#" class="btn btn-mini disabled" id="NewsNavPrev">
+											<i class="icon-chevron-left"></i>
+										</a>
+										<a href="#" class="btn btn-mini" id="NewsNavNext">
+											<i class="icon-chevron-right"></i>
+										</a>
+									</div>										
+									<!-- END News nav-->
+								</div>
+								<div class="widget-content">
+									<!-- News list -->
+									<div class="tabbable">
+										<div class="tab-content" id="newsTabContent">
+											<!-- First news -->
+											<div class="tab-pane active" id="tab1.1">
+												<p class="newsContent"><img src="http://placehold.it/100x100/eee&text=News+1">The best course was to wait patiently, and regain the lost time by greater speed when the obstacle was removed. The procession of buffaloes lasted three full hours, and it was night before the track was clear. The last ranks of the herd were now passing over the rails, while the first had already disappeared below the southern horizon.</p>
+											</div>
+											<!-- END First news -->
+											<div class="tab-pane" id="tab1.2">
+												<p class="newsContent"><img src="http://placehold.it/200x100/eee&text=News+2">Phileas Fogg, as self-composed as if the judgment did not in the least concern him, did not even lift his eyebrows while it was being pronounced. Just as the clerk was calling the next case, he rose, and said, "I offer bail."
+"You have that right," returned the judge.
+Fix's blood ran cold, but he resumed his composure when he heard the judge announce that the bail required for each prisoner would be one thousand pounds.
+"I will pay it at once," said Mr. Fogg, taking a roll of bank-bills from the carpet-bag, which Passepartout had by him, and placing them on the clerk's desk.
+"This sum will be restored to you upon your release from prison," said the judge. "Meanwhile, you are liberated on bail."</p>
+											</div>
+											<div class="tab-pane" id="tab1.3">
+												<p class="newsContent"><img src="http://placehold.it/150x100/eee&text=News+3">"When I say I'll wager," returned Stuart, "I mean it." "All right," said Mr. Fogg; and, turning to the others, he continued: "I have a deposit of twenty thousand at Baring's which I will willingly risk upon it."
+"Twenty thousand pounds!" cried Sullivan. "Twenty thousand pounds, which you would lose by a single accidental delay!"</p>
+											</div>
+											<div class="tab-pane" id="tab1.4">
+												<p class="newsContent"><img src="http://placehold.it/100x200/eee&text=News+4"><p>Thus the night passed.  At dawn, the half-extinguished disc of the sun rose above a misty horizon; but it was now possible to recognise objects two miles off.  Phileas Fogg and the squad had gone southward; in the south all was still vacancy.  It was then seven o'clock.</p>
 
-    </div> <!-- /container -->
-	
+The captain, who was really alarmed, did not know what course to take.</p>
+											</div>
+										</div>
+									</div>
+									<!-- END News list -->
+								</div>
+							</div>
+							<!-- END News -->
+						</div>							
+					</div>
+					<div class="row-fluid">
+						<!-- Left col -->
+						<div class="span4">
+							<!-- Calendar -->
+							<div class="widget-box">
+								<div class="widget-title">
+									<span class="icon"><i class="icon-calendar"></i></span>
+									<h5>Calendrier</h5>									
+								</div>
+								<div class="widget-content">
+									<div id='calendar'></div>
+								</div>
+							</div>
+							<!-- END Calendar -->
+						</div>
+						<!-- END Left col -->
+						<!-- Right col -->
+						<div class="span8">
+							<!-- Event List -->
+							<div class="widget-box">
+								<div class="widget-title">
+									<span class="icon"><i class="icon-th-list"></i></span>
+									<h5>Evénements</h5>
+									<span class="label" data-original-title="2 événements">2</span>
+								</div>
+								<div class="widget-content">
+									<!-- Event -->
+									<div class="new-update clearfix">
+										<img src="http://placehold.it/100x100/eee&text=TEST1">
+										<div class="update-done">										
+											<a title="" href="#"><strong>A new server is on the board!</strong></a>
+											<span>We've just set up a new server. Our gurus ...</span>
+										</div>
+										<div class="update-date"><span class="update-day">23</span>jan 2013</div>
+									</div>
+									<!-- END Event -->
+									<div class="new-update clearfix">
+										<img src="http://placehold.it/100x100/eee&text=TEST2">
+										<div class="update-done">
+											<a title="" href="#"><strong>A new server is on the board!</strong></a>
+											<span>We've just set up a new server. Our gurus ...</span>
+										</div>
+										<div class="update-date"><span class="update-day">08</span>fev 2013</div>
+									</div>
+								</div>
+							</div>
+							<!-- END Event List -->
+						</div>
+						<!-- END Right col -->
+					</div>
+				</div>
+			</div>
+			<!-- END HOME -->
+			<!-- COVOITURAGE -->
+			<div class="tab-pane" id="tab3">
+				<p>Covoiturage</p>
+			</div>
+			<!-- END COVOITURAGE -->
+			<!-- LOGEMENT -->
+			<div class="tab-pane" id="tab4">
+				<p>Logements</p>
+			</div>
+			<!-- END LOGEMENT -->
+			<!-- SELLS -->
+			<div class="tab-pane" id="tab5">
+				<p>Vente de biens</p>
+			</div>
+			<!-- END SELLS -->
+			<!-- STAGE -->
+			<div class="tab-pane" id="tab6">
+				<p>Stages</p>
+			</div>
+			<!-- END STAGE -->
+		</div>
+		<!-- END Content -->
+	</div>
     <script src="http://code.jquery.com/jquery.min.js"></script>
+	<script type='text/javascript' src='js/fullcalendar.js'></script>
     <script src="js/bootstrap.js"></script>
+	<script>
+	function DateDiff(date1, date2) {
+		var datediff = date1.getTime() - date2.getTime(); //store the getTime diff - or +
+		return (datediff / (24*60*60*1000)); //Convert values to -/+ days and return value      
+	}
+	$(document).ready(function() {
+	
+	/* Tab nav */
+	// detect tab change
+	
+		$('a[data-toggle="tab"]').on('shown', function (e) {
+		  //alert(e.relatedTarget+ ' ->' +e.target);
+		})
+	
+	/* End Tab nav */
+	
+	/* News nav */	
+	// Nav previous
+	
+		$('#NewsNavPrev').on('click', function (e) {
+			var currentTab = $('#newsTabContent > .active');
+			var previousTab = currentTab.prev();
+			if(previousTab.length)
+			{
+				previousTab.addClass('active');
+				currentTab.removeClass('active');
+				$('#NewsNavNext').removeClass('disabled');
+				if(!previousTab.prev().length)
+				{
+					$('#NewsNavPrev').addClass('disabled');
+				}
+			}
+		  
+		});
+		// Nav next
+		$('#NewsNavNext').on('click', function (e) {
+			var currentTab = $('#newsTabContent > .active');
+			var nextTab = currentTab.next();
+			if(nextTab.length)
+			{
+				nextTab.addClass('active');
+				currentTab.removeClass('active');
+				$('#NewsNavPrev').removeClass('disabled');
+				if(!nextTab.next().length)
+				{
+					$('#NewsNavNext').addClass('disabled');
+				}
+			}
+		});
+	
+	  /* END News nav */	
+	  
+	 
+
+			// page is now ready, initialize the calendar...
+
+			$('#calendar').fullCalendar({
+				// put your options and callbacks here
+				monthNames : ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+				monthNamesShort :  ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
+				dayNames : ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+				dayNamesShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+				buttonText: {
+					today: 'Aujourd\'hui',
+					prev: '&lt;',
+					next: '&gt;'
+				},
+				firstDay:1,
+				/*dayClick: function(date, allDay, jsEvent, view) {
+					alert(date);
+					// change the day's background color just for fun
+					//$(this).css('background-color', '#ccf');
+				},*/
+				selectable : true,
+				select: function(startDate, endDate, allDay, jsEvent, view) {
+					//alert(startDate + ' to ' + endDate);
+				},
+				viewDisplay:function(view){
+					$('.fc-widget-content').css('font-weight', 'normal');
+					$('.fc-widget-content .fc-day-content > div').html('');
+					//alert(view.visStart+ ' --- ' + view.visEnd);
+					var d1 = new Date(2012,9,7);
+					var d2 = new Date(2012,8,11);
+					var d3 = new Date(2012,11,1);
+					var d4 = new Date(2012,9,3);
+					var dates = [d1,d2,d3,d4];
+					for(var i = 0; i < 4; i++)
+					{
+						myDate = dates[i];
+						if(myDate >= view.visStart && myDate < view.visEnd)
+						{
+							var dateId = DateDiff(myDate,view.visStart);
+							$('.fc-day'+dateId).css('font-weight', 'bold');
+							$('.fc-day'+dateId+'  .fc-day-content > div').html('<i class="icon-star">');
+							
+						}
+					}
+				}
+			});
+		});
+	</script>
   </body>
 </html>

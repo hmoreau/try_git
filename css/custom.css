@@ -1,0 +1,69 @@
+.tabs-shake{
+	#background-color:#eee;
+	padding-left : 10px;
+}
+.tabs-shake a{
+	border-color: transparent #ddd #ddd #ddd !important;
+}
+.tabs-shake .active a{
+	border-color: transparent #bbb #bbb #bbb !important;
+	background-color:#eee;
+	padding-top : 35px;
+}
+
+.tabs-shake > .nav-tabs > .active > a > [class^="icon-"],
+.tabs-shake > .nav-tabs > .active > a > [class*=" icon-"]
+{
+	background-image: url("../img/glyphicons-halflings.png");
+}
+
+
+.tabs-shake .nav{
+	 margin-bottom: 0;
+}
+
+.tab-content{
+	padding : 0 20px 0 20px;
+}
+
+
+/* Fix dropdown in IE8 */
+.nav-collapse.collapse {
+	height: auto;
+	overflow: visible;
+ }
+
+.widget-box{
+	/*margin: 0 0 10px 0;*/
+}
+.widget-title{
+	line-height: 18px;
+}
+.widget-title h5 {
+   margin:0px;
+}
+.widget-title span.icon{
+	border-right:none;
+	padding-right: 0;
+}
+
+
+.row-fluid:first-child{
+	margin-top:0px !important;
+}
+
+.new-update img {
+float: left;
+margin-top: 3px;
+margin-right: 13px;
+}
+
+.fc-header-title h2{
+	font-size: 22px;
+    line-height: 24px;
+}
+.newsContent img{
+	float: left;
+	margin-top: 3px;
+	margin-right: 13px;
+}
