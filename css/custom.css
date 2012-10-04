@@ -25,10 +25,9 @@
         -ms-filter: progid:DXImageTransform.Microsoft.gradient(
           gradientType=0, startColorStr=#FFFFFFFF, endColorStr=#00FFFFFF
         );
-
-	
-	
 }
+
+
 .navbar-fixed-top{
 	margin-bottom: 0;
 }
@@ -40,8 +39,7 @@
 }
 .tabs-shake .active a{
 	border-color: transparent #bbb #bbb #bbb !important;
-	background-color:#eee;
-	#padding-top : 35px;
+	background-color:#8BBED5 !important;
 }
 
 .tabs-shake > .nav-tabs > .active > a > [class^="icon-"],
@@ -119,4 +117,35 @@ margin-right: 13px;
 	text-align:center !important;
 }
 
+.navbar .nav > li > a, .widget-title h5
+{
+    text-shadow: none;
+}
 
+
+.widget-title, .modal-header, .table th, div.dataTables_wrapper .ui-widget-header{
+    background-color: #efefef;
+    background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#efefef), to(#efefef));
+    background-image: -webkit-linear-gradient(top, #efefef 0%, #efefef 100%);
+    background-image: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
+    background-image: -ms-linear-gradient(top, #efefef 0%, #efefef 100%);
+    background-image: -o-linear-gradient(top, #efefef 0%, #efefef 100%);
+    background-image: -linear-gradient(top, #efefef 0%, #efefef 100%);    
+}
+
+.table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child,
+.table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child
+{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.tabs-shake .active a,
+.gradiant{
+    background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#B0D3E3), to(#8BBED5));
+    background-image: -webkit-linear-gradient(top, #B0D3E3 0%, #8BBED5 100%);
+    background-image: -moz-linear-gradient(top, #B0D3E3 0%, #8BBED5 100%);
+    background-image: -ms-linear-gradient(top, #B0D3E3 0%, #8BBED5 100%);
+    background-image: -o-linear-gradient(top, #B0D3E3 0%, #8BBED5 100%);
+    background-image: -linear-gradient(top, #B0D3E3 0%, #8BBED5 100%);
+}
