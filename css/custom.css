@@ -149,3 +149,7 @@ margin-right: 13px;
     background-image: -o-linear-gradient(top, #B0D3E3 0%, #8BBED5 100%);
     background-image: -linear-gradient(top, #B0D3E3 0%, #8BBED5 100%);
 }
+
+.nav-img{
+    margin:5px;
+}
