@@ -123,22 +123,6 @@ margin-right: 13px;
 }
 
 
-.widget-title, .modal-header, .table th, div.dataTables_wrapper .ui-widget-header{
-    background-color: #efefef;
-    background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#efefef), to(#efefef));
-    background-image: -webkit-linear-gradient(top, #efefef 0%, #efefef 100%);
-    background-image: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
-    background-image: -ms-linear-gradient(top, #efefef 0%, #efefef 100%);
-    background-image: -o-linear-gradient(top, #efefef 0%, #efefef 100%);
-    background-image: -linear-gradient(top, #efefef 0%, #efefef 100%);    
-}
-
-.table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child,
-.table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child
-{
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-}
 
 .tabs-shake .active a,
 .gradiant{
