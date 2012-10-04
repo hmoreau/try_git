@@ -22,44 +22,41 @@
   <body>
 	<!-- Navbar -->
     <div class="navbar navbar-fixed-top">	
-      <div class="navbar-inner">
+      <div class="navbar-inner  visible-desktop">
         <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Test de Bootsrap</a>
-		  
-		<ul class="nav pull-right">
-			<li class="divider-vertical"></li>
-			<!-- Options -->
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<i class="icon-wrench"></i> Options
-					<b class="caret"></b>
-				</a>
-				<ul class="dropdown-menu">
-					<li><a href="#">Paramètres du compte</a></li>
-					<li><a href="#">Paramètres de confidentialité</a></li>				  
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#"><i class="icon-off"></i> Déconnexion</a></li>
-				</ul>
-			</li>
-			<!-- END Options -->
-		</ul>
-		<ul class="nav">
-			<li class="divider-vertical"></li>
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="#">Test de Bootsrap</a>
+			<ul class="nav pull-right">
+				<li class="divider-vertical"></li>
+				<!-- Options -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-wrench"></i> Options
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Paramètres du compte</a></li>
+						<li><a href="#">Paramètres de confidentialité</a></li>				  
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#"><i class="icon-off"></i> Déconnexion</a></li>
+					</ul>
+				</li>
+				<!-- END Options -->
+			</ul>
+			<ul class="nav">
 			<li>
 				<form class="navbar-search pull-left">
-				  <input type="text" class="search-query" placeholder="Rechercher">
+					<input type="text" class="search-query" placeholder="Rechercher">
 				</form>
 			</li>
-			<li class="divider-vertical"></li>
 			<!-- Notifications -->
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					Prénom + Nom (3)
+					Prénom + Nom <span class="badge badge-important">3</span>
 					<b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu">
@@ -73,25 +70,21 @@
 			<!-- MessageBox -->
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<i class="icon-envelope"></i> Messagerie (2)
+					<i class="icon-envelope"></i> Messagerie <span class="badge badge-info">2</span>
 					<b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu">
 					<li><a href="#">Nouveau message</a></li>
-					<li><a href="#">Boîte de réception (2)</a></li>
+					<li><a href="#">Boîte de réception <span class="badge badge-info">2</span></a></li>
 					<li><a href="#">Rechercher un message</a></li>
 				</ul>
 			</li>
 			<!-- END MessageBox -->
-		</ul>
-          
+			</ul>
         </div>
       </div>
-    </div>
-	<!-- END Navbar -->
-	<div class="tabbable">
-		<!-- Tab nav -->
-		<div class="tabs-below tabs-shake">
+	  <!-- Tab nav -->
+		<div class="tabs-below tabs-shake affix visible-desktop visible-tablet">
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#tab1" data-toggle="tab"><i class="icon-user"></i> Mon profil</a></li>
 				<li><a href="#tab2" data-toggle="tab"><i class="icon-bookmark"></i> Accueil</a></li>
@@ -101,9 +94,12 @@
 				<li><a href="#tab6" data-toggle="tab"><i class="icon-briefcase"></i> Stages</a></li>
 			</ul>
 		</div>
-		<!-- END Tab nav -->
+    </div>
+	<!-- END Tab nav -->
+	<!-- END Navbar -->
+	<div class="tabbable">
 		<!-- Content -->
-		<div class="tab-content">
+		<div class="tab-content content">
 			<!-- PROFILE -->
 			<div class="tab-pane active" id="tab1">
 				<div class="container-fluid">
@@ -115,16 +111,16 @@
 									<h5>Mes informations</h5>									
 								</div>
 								<div class="widget-content">
-									<p><img src="http://placehold.it/200x200/eee&text=Profile"></p>
+									<p class="align-center"><img src="http://placehold.it/200x200/eee&text=Profile"></p>
 									<p><i class="icon-heart"></i> <strong>Status :</strong> Célibataire</p>
 									<p>
 										<i class="icon-film"></i> <strong>Centres d'intérêt :</strong> 
-										<span class="label label-success">Musique</span>
-										<span class="label label-success">Cinéma</span>
-										<span class="label label-success">Yoga</span>
+										<a href="#"><span class="label label-success">Musique</span></a>
+										<a href="#"><span class="label label-success">Cinéma</span></a>
+										<a href="#"><span class="label label-success">Yoga</span></a>
 									</p>
-									<p class="text-warning">
-										 <i class="icon-thumbs-up"></i> <strong>Je suis recommandé par 35 personnes</strong>
+									<p>
+										 <i class="icon-thumbs-up"></i> <a href="#"  class="text-warning"><strong>Je suis recommandé par 35 personnes</strong></a>
 									</p>
 								</div>
 							</div>
@@ -136,21 +132,119 @@
 									<h5>Mon profil</h5>									
 								</div>
 								<div class="widget-content">
-									<strong>Prénom Nom</strong><br />
-									01/01/2000<br />
+									<strong>Hubert MOREAU</strong><br />
+									01/12/1981<br />
 									Paris<br />
-									<span class="label">Ecole</span><br />
-									<span class="label label-info">Association 1</span> <span class="label label-info">Association 2</span><br />
+									<a href="#"><span class="label" rel="tooltip" data-placement="right" data-original-title="Ecole">ECE</span></a><br />
+									<a href="#"><span class="label label-info" rel="tooltip" data-placement="top" data-original-title="Association de l'école : ECE">Association 1</span></a>
+									<a href="#"><span class="label label-info" rel="tooltip" data-placement="top" data-original-title="Association de l'école : ECE">Association 2</span></a><br />
 									06.01.02.03.04<br />
 								</div>
 							</div>
 							<div class="widget-box">
 								<div class="widget-title">
 									<span class="icon"><i class="icon-tags"></i></span>
-									<h5>Mes Annonces</h5>									
+									<h5>Mes Annonces en cours</h5>
+									<span class="label" data-original-title="2 événements">23</span>									
 								</div>
-								<div class="widget-content">
-									Annonces
+								<div class="widget-content nopadding">
+									<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">
+										<table class="table table-bordered table-striped">
+											<thead>
+												<tr>
+													<th>Type</th>
+													<th>Titre</th>
+													<th>Date de création</th>
+													<th>Date de fin</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="align-center"><span class="label" rel="tooltip" data-placement="left" data-original-title="Covoiturage"><i class="icon-road icon-white"></i></span></td>
+													<td>Covoiturage n°393</td>
+													<td>10 octobre 2012</td>
+													<td>1 décembre 2012</td>
+													<td><a href="#"><span class="label label-inverse" rel="tooltip" data-placement="left" data-original-title="Voir"><i class="icon-search icon-white"></i></span></a></td>
+												</tr>
+												<tr>
+													<td class="align-center"><span class="label" rel="tooltip" data-placement="left" data-original-title="Logements"><i class="icon-home icon-white"></i></span></td>
+													<td>Colocation à Versailles</td>
+													<td>12 septembre 2012</td>
+													<td>25 juin 2013</td>
+													<td><a href="#"><span class="label label-inverse" rel="tooltip" data-placement="left" data-original-title="Voir"><i class="icon-search icon-white"></i></span></a></td>
+												</tr>
+												<tr>
+													<td class="align-center"><span class="label" rel="tooltip" data-placement="left" data-original-title="Vente de biens"><i class="icon-shopping-cart icon-white"></i></span></td>
+													<td>Frigo 1/2 hauteur</td>
+													<td>6 juin 2012</td>
+													<td>31 décembre 2012</td>
+													<td><a href="#"><span class="label label-inverse" rel="tooltip" data-placement="left" data-original-title="Voir"><i class="icon-search icon-white"></i></span></a></td>
+												</tr>
+												<tr>
+													<td class="align-center"><span class="label" rel="tooltip" data-placement="left" data-original-title="Stage"><i class="icon-briefcase icon-white"></i></span></td>
+													<td>Row 2</td>
+													<td>Row 3</td>
+													<td>Row 4</td>
+													<td><a href="#"><span class="label label-inverse" rel="tooltip" data-placement="left" data-original-title="Voir"><i class="icon-search icon-white"></i></span></a></td>
+												</tr>
+												<tr>
+													<td class="align-center"><span class="label" rel="tooltip" data-placement="left" data-original-title="Vente de biens"><i class="icon-shopping-cart icon-white"></i></span></td>
+													<td>Row 2</td>
+													<td>Row 3</td>
+													<td>Row 4</td>
+													<td><a href="#"><span class="label label-inverse" rel="tooltip" data-placement="left" data-original-title="Voir"><i class="icon-search icon-white"></i></span></a></td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+											<div class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers align-center" id="DataTables_Table_0_paginate">
+												<a tabindex="0" class="first ui-corner-tl ui-corner-bl fg-button ui-button ui-state-default ui-state-disabled" id="DataTables_Table_0_first">First</a>
+												<a tabindex="0" class="previous fg-button ui-button ui-state-default ui-state-disabled" id="DataTables_Table_0_previous"><i class="icon-chevron-left"></i></a>
+												<span>
+													<a tabindex="0" class="fg-button ui-button ui-state-default ui-state-disabled">1</a><a tabindex="0" class="fg-button ui-button ui-state-default">2</a><a tabindex="0" class="fg-button ui-button ui-state-default">3</a><a tabindex="0" class="fg-button ui-button ui-state-default">4</a><a tabindex="0" class="fg-button ui-button ui-state-default">5</a>
+												</span>
+												<a tabindex="0" class="next fg-button ui-button ui-state-default" id="DataTables_Table_0_next"><i class="icon-chevron-right"></i></a>
+												<a tabindex="0" class="last ui-corner-tr ui-corner-br fg-button ui-button ui-state-default" id="DataTables_Table_0_last">Last</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="widget-box">
+								<div class="widget-title">
+									<span class="icon"><i class="icon-tags"></i></span>
+									<h5>Mes Annonces terminées</h5>
+									<span class="label" data-original-title="2 événements">2</span>									
+								</div>
+								<div class="widget-content nopadding">
+									<table class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th>Type</th>
+												<th>Titre</th>
+												<th>Date de création</th>
+												<th>Date de fin</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="align-center"><span class="label" rel="tooltip" data-placement="left" data-original-title="Stage"><i class="icon-briefcase icon-white"></i></span></td>
+												<td>Row 2</td>
+												<td>Row 3</td>
+												<td>Row 4</td>
+												<td><a href="#"><span class="label label-inverse" rel="tooltip" data-placement="left" data-original-title="Voir"><i class="icon-search icon-white"></i></span></a></td>
+											</tr>
+											<tr>
+												<td class="align-center"><span class="label" rel="tooltip" data-placement="left" data-original-title="Vente de biens"><i class="icon-shopping-cart icon-white"></i></span></td>
+												<td>Row 2</td>
+												<td>Row 3</td>
+												<td>Row 4</td>
+												<td><a href="#"><span class="label label-inverse" rel="tooltip" data-placement="left" data-original-title="Voir"><i class="icon-search icon-white"></i></span></a></td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>
@@ -170,10 +264,10 @@
 									<h5>News</h5>
 									<!-- News nav-->
 									<div class="buttons">
-										<a href="#" class="btn btn-mini disabled" id="NewsNavPrev">
+										<a href="#" class="btn btn-mini disabled" id="NewsNavPrev"  rel="tooltip" data-placement="top" data-original-title="News précédente">
 											<i class="icon-chevron-left"></i>
 										</a>
-										<a href="#" class="btn btn-mini" id="NewsNavNext">
+										<a href="#" class="btn btn-mini" id="NewsNavNext"  rel="tooltip" data-placement="top" data-original-title="News suivante">
 											<i class="icon-chevron-right"></i>
 										</a>
 									</div>										
@@ -235,7 +329,7 @@ The captain, who was really alarmed, did not know what course to take.</p>
 								<div class="widget-title">
 									<span class="icon"><i class="icon-th-list"></i></span>
 									<h5>Evénements</h5>
-									<span class="label" data-original-title="2 événements">2</span>
+									<span class="label" rel="tooltip" data-placement="left" data-original-title="2 évènements">2</span>
 								</div>
 								<div class="widget-content">
 									<!-- Event -->
@@ -390,6 +484,10 @@ The captain, who was really alarmed, did not know what course to take.</p>
 					}
 				}
 			});
+			
+			// Activate tooltip
+			$("[rel=tooltip]").tooltip();
+			
 		});
 	</script>
   </body>

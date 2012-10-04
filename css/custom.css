@@ -1,6 +1,39 @@
 .tabs-shake{
-	#background-color:#eee;
 	padding-left : 10px;
+	z-index:999;	
+	width:100%;
+	/*background-color: rgba(255, 255, 255, 0.5);*/
+	
+	/* webkit example */
+        background-image: -webkit-gradient(
+          linear,  right top, right bottom, from(rgba(255, 255, 255, 1.0)),
+          to(rgba(255, 255, 255, 0))
+        );
+
+        /* mozilla example - FF3.6+ */
+        background-image: -moz-linear-gradient(
+          top center,
+          rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%
+        );
+
+        /* IE 5.5 - 7 */
+        filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=0, startColorStr=#FFFFFFFF, endColorStr=#00FFFFFF
+        );
+
+        /* IE8 uses -ms-filter for whatever reason... */
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=0, startColorStr=#FFFFFFFF, endColorStr=#00FFFFFF
+        );
+
+	
+	
+}
+.navbar-fixed-top{
+	margin-bottom: 0;
+}
+.content{
+	margin-top : 40px;
 }
 .tabs-shake a{
 	border-color: transparent #ddd #ddd #ddd !important;
@@ -8,7 +41,7 @@
 .tabs-shake .active a{
 	border-color: transparent #bbb #bbb #bbb !important;
 	background-color:#eee;
-	padding-top : 35px;
+	#padding-top : 35px;
 }
 
 .tabs-shake > .nav-tabs > .active > a > [class^="icon-"],
@@ -21,11 +54,17 @@
 .tabs-shake .nav{
 	 margin-bottom: 0;
 }
+.tabs-shake li{
+	 background-color:#fff;
+}
 
 .tab-content{
 	padding : 0 20px 0 20px;
 }
 
+.navbar .divider-vertical{
+	margin:0;
+}
 
 /* Fix dropdown in IE8 */
 .nav-collapse.collapse {
@@ -67,3 +106,17 @@ margin-right: 13px;
 	margin-top: 3px;
 	margin-right: 13px;
 }
+
+.align-left{
+	text-align:left !important;
+}
+
+.align-right{
+	text-align:right !important;
+}
+
+.align-center{
+	text-align:center !important;
+}
+
+
