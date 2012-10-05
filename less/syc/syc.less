@@ -1,0 +1,164 @@
+
+
+  
+      .colorX (@index,@tmpColor) when (@index < 13) {
+        (~".color@{index}") { .color(@tmpColor); }
+		(~".gradiant@{index}") { .gradiantC(@tmpColor); }
+        .colorX(@index + 1,spin(@tmpColor,30));
+      }
+      .colorX (0) {}
+
+      
+      .color (@myColor) {
+        background-color: @myColor;
+      }
+	  .gradiantC(@color:@startColor) {
+		background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(lighten(@color,15%)), to(@color));
+		background-image: -webkit-linear-gradient(top, lighten(@color,15%) 0%, @color 100%);
+		background-image: -moz-linear-gradient(top, lighten(@color,15%) 0%, @color 100%);
+		background-image: -ms-linear-gradient(top, lighten(@color,15%) 0%, @color 100%);
+		background-image: -o-linear-gradient(top, lighten(@color,15%) 0%, @color 100%);
+		background-image: -linear-gradient(top, lighten(@color,15%) 0%, @color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=lighten(@color,15%), endColorstr=@color);
+		-ms-filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=lighten(@color,15%), endColorstr=@color); /* IE8 */
+	}
+	  
+	  .colorX (1,@color1);
+
+ 
+
+.brand{
+	font-family: 'Nothing You Could Do', cursive;
+	color: @grayDarker !important;
+}
+.tabs-shake{
+	padding-left : 10px;
+	z-index:999;	
+	width:100%;
+	/* Progressive transparent to white gradient*/
+	/* webkit */
+	background-image: -webkit-gradient(
+	  linear,  right top, right bottom, from(rgba(255, 255, 255, 1.0)),
+	  to(rgba(255, 255, 255, 0))
+	);
+	/* mozilla - FF3.6+ */
+	background-image: -moz-linear-gradient(
+	  top center,
+	  rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%
+	);
+	/* IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.gradient(
+	  gradientType=0, startColorStr=#FFFFFFFF, endColorStr=#00FFFFFF
+	);
+	/* IE8 uses -ms-filter for whatever reason... */
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(
+	  gradientType=0, startColorStr=#FFFFFFFF, endColorStr=#00FFFFFF
+	);
+}
+
+
+.navbar-fixed-top, .tabs-shake .nav{
+	margin-bottom: 0;
+}
+.content{
+	margin-top : 40px;
+}
+.tabs-shake a{
+	border-color: transparent #ddd #ddd #ddd !important;
+}
+.tabs-shake .active a{
+	border-color: transparent #bbb #bbb #bbb !important;
+	//background-color:#8BBED5 !important;
+	.gradiantC(@color1);
+}
+
+.tabs-shake > .nav-tabs > .active > a > [class^="icon-"],
+.tabs-shake > .nav-tabs > .active > a > [class*=" icon-"]
+{
+	background-image: url("../img/glyphicons-halflings.png");
+}
+
+.tabs-shake li{
+	 background-color:#fff;
+}
+
+.tab-content{
+	padding : 0 20px 0 20px;
+}
+
+.navbar .divider-vertical{
+	margin:0;
+}
+
+/* Fix dropdown in IE8 */
+.nav-collapse.collapse {
+	height: auto;
+	overflow: visible;
+ }
+
+.widget-title{
+	line-height: 18px;
+}
+.widget-title h5 {
+   margin:0px;
+   font-family: 'Quicksand', sans-serif;
+   font-weight:bold;
+   font-size: 16px;
+   letter-spacing:-1px
+}
+.widget-title span.icon{
+	border-right:none;
+	padding-right: 0;
+}
+
+
+.row-fluid:first-child{
+	margin-top:0px !important;
+}
+
+.new-update img {
+	float: left;
+}
+
+.fc-header-title h2{
+	font-size: 22px;
+    line-height: 24px;
+}
+.new-update img , .newsContent img{
+	float: left;
+	margin-top: 3px;
+	margin-right: 13px;
+}
+
+.align-left{
+	text-align:left !important;
+}
+
+.align-right{
+	text-align:right !important;
+}
+
+.align-center{
+	text-align:center !important;
+}
+
+.navbar .nav > li > a, .widget-title h5
+{
+    text-shadow: none;
+	letter-spacing:-1px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+}
+
+
+
+
+.nav-img{
+    margin:5px;
+}
+
+.navbar-search{
+	margin-right: 20px;
+}
+
+

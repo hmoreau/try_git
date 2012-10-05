@@ -30,6 +30,32 @@
 @purple:                #7a43b6;
 
 
+// SYC colors
+// -------------------------
+
+/*
+@color1:				#8bbed5;
+@color2:				#8ba2d5;
+@color3:				#9e8bd5;
+@color4:				#c88bd5;
+@color5:				#da8faf;
+@color6:				#e59b95;
+@color7:				#e5b895;
+@color8:				#e5c895;
+@color9:				#e5d895;
+@color10:				#e1e394;
+@color11:				#bddc8f;
+@color12:				#8bd59b; 	
+*/
+
+
+//@color1:				#B5EBDC;
+@color1:				#D9CEB2;
+@colorD1:				desaturate(@color1,30%);
+@colorS1:				saturate(@color1,30%);
+
+
+
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
@@ -109,7 +135,7 @@
 @dropdownLinkColorActive:       @dropdownLinkColor;
 
 @dropdownLinkBackgroundActive:  @linkColor;
-@dropdownLinkBackgroundHover:   #8BBED5;
+@dropdownLinkBackgroundHover:   @color1;
 
 
 
@@ -159,7 +185,7 @@
 @navbarCollapseWidth:             979px;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #8BBED5;
+@navbarBackgroundHighlight:       @color1;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
