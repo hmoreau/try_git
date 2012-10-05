@@ -6895,3 +6895,6 @@ table.fc-border-separate {
 body {
   background-color: #faf5e8;
 }
+.popover {
+  width: auto;
+}
