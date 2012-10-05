@@ -82,6 +82,10 @@
 }
 .widget-title h5 {
    margin:0px;
+   font-family: 'Quicksand', sans-serif;
+   font-weight:bold;
+   font-size: 16px;
+   letter-spacing:-1px
 }
 .widget-title span.icon{
 	border-right:none;
@@ -124,6 +128,9 @@ margin-right: 13px;
 .navbar .nav > li > a, .widget-title h5
 {
     text-shadow: none;
+	letter-spacing:-1px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
 }
 
 
