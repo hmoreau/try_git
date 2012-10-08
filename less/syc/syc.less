@@ -3,14 +3,19 @@
   
       .colorX (@index,@tmpColor) when (@index < 13) {
         (~".color@{index}") { .color(@tmpColor); }
+		(~".bgcolor@{index}") { .bgcolor(@tmpColor); }
 		(~".gradiant@{index}") { .gradiantC(@tmpColor); }
         .colorX(@index + 1,spin(@tmpColor,30));
       }
       .colorX (0) {}
 
       
-      .color (@myColor) {
+      .bgcolor (@myColor) {
         background-color: @myColor;
+      }
+	  
+	  .color (@myColor) {
+        color: @myColor;
       }
 	  .gradiantC(@color:@startColor) {
 		background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(lighten(@color,15%)), to(@color));
@@ -34,7 +39,7 @@
 .tabs-shake{
 	padding-left : 10px;
 	z-index:999;	
-	width:100%;
+	width:100% !important;
 	/* Progressive transparent to white gradient*/
 	/* webkit */
 	background-image: -webkit-gradient(
@@ -167,4 +172,38 @@ body{
 	.popover{
 		width:auto;
 	}
+}
+
+header{
+	background:	url("/img/fotolia_37491085.jpg") repeat-x scroll top right transparent;
+	top:0px;
+	color: @color1 !important;
+}
+header .brand{
+	color: @color1 !important;	
+}
+header p{
+	padding: 20px 0 20px 0;
+	color:@black;
+	font-family: 'Quicksand', sans-serif;
+	font-weight:bold;
+	font-size: 21px;
+}
+.affix {
+  position: relative;
+}
+.affix #navbar {
+	position: fixed; 
+    top: 0px; 
+    left: 0px;
+	z-index:999;
+	width:100%;
+}
+.affix #generalcontent {
+	padding-top: 60px;
+}
+
+header img {
+	float:right;
+	padding: 10px 0 10px 0;
 }

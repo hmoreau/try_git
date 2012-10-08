@@ -6634,6 +6634,9 @@ table.fc-border-separate {
   _overflow: hidden;
 }
 .color1 {
+  color: #f1e0c3;
+}
+.bgcolor1 {
   background-color: #f1e0c3;
 }
 .gradiant1 {
@@ -6647,6 +6650,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#f1e0c3);
 }
 .color2 {
+  color: #ebf1c3;
+}
+.bgcolor2 {
   background-color: #ebf1c3;
 }
 .gradiant2 {
@@ -6660,6 +6666,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#ebf1c3);
 }
 .color3 {
+  color: #d4f1c3;
+}
+.bgcolor3 {
   background-color: #d4f1c3;
 }
 .gradiant3 {
@@ -6673,6 +6682,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#d4f1c3);
 }
 .color4 {
+  color: #c3f1c9;
+}
+.bgcolor4 {
   background-color: #c3f1c9;
 }
 .gradiant4 {
@@ -6686,6 +6698,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#c3f1c9);
 }
 .color5 {
+  color: #c3f1e0;
+}
+.bgcolor5 {
   background-color: #c3f1e0;
 }
 .gradiant5 {
@@ -6699,6 +6714,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#c3f1e0);
 }
 .color6 {
+  color: #c3ebf1;
+}
+.bgcolor6 {
   background-color: #c3ebf1;
 }
 .gradiant6 {
@@ -6712,6 +6730,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#c3ebf1);
 }
 .color7 {
+  color: #c3d4f1;
+}
+.bgcolor7 {
   background-color: #c3d4f1;
 }
 .gradiant7 {
@@ -6725,6 +6746,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#c3d4f1);
 }
 .color8 {
+  color: #c9c3f1;
+}
+.bgcolor8 {
   background-color: #c9c3f1;
 }
 .gradiant8 {
@@ -6738,6 +6762,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#c9c3f1);
 }
 .color9 {
+  color: #e0c3f1;
+}
+.bgcolor9 {
   background-color: #e0c3f1;
 }
 .gradiant9 {
@@ -6751,6 +6778,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#e0c3f1);
 }
 .color10 {
+  color: #f1c3eb;
+}
+.bgcolor10 {
   background-color: #f1c3eb;
 }
 .gradiant10 {
@@ -6764,6 +6794,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#f1c3eb);
 }
 .color11 {
+  color: #f1c3d4;
+}
+.bgcolor11 {
   background-color: #f1c3d4;
 }
 .gradiant11 {
@@ -6777,6 +6810,9 @@ table.fc-border-separate {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#f1c3d4);
 }
 .color12 {
+  color: #f1c9c3;
+}
+.bgcolor12 {
   background-color: #f1c9c3;
 }
 .gradiant12 {
@@ -6796,7 +6832,7 @@ table.fc-border-separate {
 .tabs-shake {
   padding-left: 10px;
   z-index: 999;
-  width: 100%;
+  width: 100% !important;
   background-image: -webkit-gradient(linear,right top,right bottom,from(#ffffff),to(rgba(255,255,255,0)));
   background-image: -moz-linear-gradient(top center,#ffffff 20%,rgba(255,255,255,0) 95%);
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#FFFFFFFF,endColorStr=#00FFFFFF);
@@ -6899,4 +6935,36 @@ body {
   .popover {
     width: auto;
   }
+}
+header {
+  background: url("/img/fotolia_37491085.jpg") repeat-x scroll top right transparent;
+  top: 0px;
+  color: #f1e0c3 !important;
+}
+header .brand {
+  color: #f1e0c3 !important;
+}
+header p {
+  padding: 20px 0 20px 0;
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+}
+.affix {
+  position: relative;
+}
+.affix #navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  width: 100%;
+}
+.affix #generalcontent {
+  padding-top: 60px;
+}
+header img {
+  float: right;
+  padding: 10px 0 10px 0;
 }
