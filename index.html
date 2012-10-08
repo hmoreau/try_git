@@ -124,7 +124,7 @@
 										<a href="#"><span class="label label-success">Yoga</span></a>
 									</p>
 									<p>
-										 <i class="icon-thumbs-up"></i> <a href="#" id="recommend"  class="text-warning"><strong>Je suis recommandé par 35 personnes</strong></a>
+										 <i class="icon-thumbs-up"></i> <a href="#" id="recommend"  class="text-warning" ><strong>Je suis recommandé par 35 personnes</strong></a>
 									</p>
 								</div>
 							</div>
@@ -511,21 +511,43 @@ The captain, who was really alarmed, did not know what course to take.</p>
 			});
 			
 			// Activate tooltip
-			$("[rel=tooltip]").tooltip();
-			
-			function getPopoverData()
+			function activateTooltip()
 			{
-				return "<h6>Personnes qui vous recommandent et qui recommandent cette personne</h6><p><a href=\"#\"><img src=\"http://placehold.it/50x50/eee&text=Profile\"  rel=\"tooltip\" data-original-title=\"first tooltip\"></a> <a href=\"#\"><img src=\"http://placehold.it/50x50/eee&text=Profile\"  rel=\"tooltip\" data-original-title=\"first tooltip\"></a> <a href=\"#\"><img src=\"http://placehold.it/50x50/eee&text=Profile\"  rel=\"tooltip\" data-original-title=\"first tooltip\"></a></p><h6>Personnes qui recommandent Hubert Moreau</h6><p><a href=\"#\"><img src=\"http://placehold.it/50x50/eee&text=Profile\"  rel=\"tooltip\" data-original-title=\"first tooltip\"></a> <a href=\"#\"><img src=\"http://placehold.it/50x50/eee&text=Profile\"  rel=\"tooltip\" data-original-title=\"first tooltip\"></a> <a href=\"#\"><img src=\"http://placehold.it/50x50/eee&text=Profile\"  rel=\"tooltip\" data-original-title=\"first tooltip\"></a> <a href=\"#\"><img src=\"http://placehold.it/50x50/eee&text=Profile\"  rel=\"tooltip\" data-original-title=\"first tooltip\"></a> <a href=\"#\"><img src=\"http://placehold.it/50x50/eee&text=Profile\"  rel=\"tooltip\" data-original-title=\"first tooltip\"></a></p></ul>";
+				$("[rel=tooltip]").tooltip();
 			}
+			activateTooltip();
+			
+			function getPopoverData(el)
+			{
+				var retVal='';
+				$.ajax({
+					type: "GET",
+					url: "data/recommand.html",
+					processData: true,
+					dataTypeString: 'html',
+					async: false
+				}).done(function(data, textStatus, jqXHR) { 
+				  retVal= data;
+				});
+				return retVal;
+			}
+			
 			
 			// Popover
 			$('#recommend').popover(
 				{
 					html:true,
-					title:'Les personnes qui recommandent Hubert Moreau &nbsp;<a class="label pull-right" data-original-title="2 événements" id="recommendCloseBtn" onclick="$(\'#recommend\').popover(\'hide\');">X</a>',
-					content:getPopoverData()
+					title:'Les personnes qui recommandent Hubert Moreau &nbsp;<a class="label pull-right" data-original-title="2 événements" id="recommendCloseBtn" onclick="$(\'#recommend\').popover(\'hide\');$(\'.tooltip\').hide();">X</a>',
+					placement:'right',
+					content:getPopoverData($(this))
 				}
 			);
+			// reactivate tooltips for popover
+			$('#recommend').click(function(){
+				activateTooltip();
+			});
+				
+			
 		});
 	</script>
   </body>
