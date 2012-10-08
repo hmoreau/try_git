@@ -6842,9 +6842,6 @@ table.fc-border-separate {
 .tabs-shake .nav {
   margin-bottom: 0;
 }
-.content {
-  margin-top: 40px;
-}
 .tabs-shake a {
   border-color: transparent #ddd #ddd #ddd !important;
 }
@@ -6966,7 +6963,7 @@ header p {
   width: 100%;
 }
 .affix #generalcontent {
-  padding-top: 60px;
+  padding-top: 80px;
 }
 header img {
   float: right;
