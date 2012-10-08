@@ -405,6 +405,9 @@ The captain, who was really alarmed, did not know what course to take.</p>
 			<!-- END STAGE -->
 		</div>
 		<!-- END Content -->
+		<div id="visible-phone" class="visible-phone"></div>
+		<div id="visible-tablet" class="visible-tablet"></div>
+		<div id="visible-desktop" class="visible-desktop"></div>
 	</div>
     <script src="http://code.jquery.com/jquery.min.js"></script>
 	<script type='text/javascript' src='js/fullcalendar.js'></script>
@@ -517,7 +520,7 @@ The captain, who was really alarmed, did not know what course to take.</p>
 			}
 			activateTooltip();
 			
-			function getPopoverData(el)
+			function getPopoverData()
 			{
 				var retVal='';
 				$.ajax({
@@ -532,22 +535,50 @@ The captain, who was really alarmed, did not know what course to take.</p>
 				return retVal;
 			}
 			
+			function getPopoverPlacement()
+			{
+				var layout = detectLayout();
+				if(layout == 'phone')
+					return 'top';
+				return 'right';
+			}
 			
 			// Popover
-			$('#recommend').popover(
-				{
-					html:true,
-					title:'Les personnes qui recommandent Hubert Moreau &nbsp;<a class="label pull-right" data-original-title="2 événements" id="recommendCloseBtn" onclick="$(\'#recommend\').popover(\'hide\');$(\'.tooltip\').hide();">X</a>',
-					placement:'right',
-					content:getPopoverData($(this))
-				}
-			);
-			// reactivate tooltips for popover
-			$('#recommend').click(function(){
-				activateTooltip();
-			});
-				
 			
+			
+			$('#recommend').click(function(){
+				$('#recommend').popover(
+					{
+						html:true,
+						title:'<a class="label pull-right" data-original-title="2 événements" id="recommendCloseBtn" onclick="$(\'#recommend\').popover(\'hide\').popover(\'destroy\');$(\'.tooltip\').hide();">X</a>Les personnes qui recommandent Hubert Moreau',
+						placement:getPopoverPlacement(),
+						content:getPopoverData()
+					}
+				).popover('show');
+				
+				// reactivate tooltips for popover
+				activateTooltip();
+				
+				
+			});
+			
+			function detectLayout()
+			{
+				var layout = null;
+				if($('#visible-desktop').css('display') != 'none')
+				{
+					layout = 'desktop';
+				}
+				else if($('#visible-tablet').css('display') != 'none')
+				{
+					layout = 'tablet';
+				}
+				else if($('#visible-phone').css('display') != 'none')
+				{
+					layout = 'phone';
+				}
+				return layout;
+			}
 		});
 	</script>
   </body>
