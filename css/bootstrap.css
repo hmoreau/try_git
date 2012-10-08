@@ -6929,7 +6929,7 @@ table.fc-border-separate {
   margin-right: 20px;
 }
 body {
-  background-color: #ffffff;
+  background-color: #fffcf8;
 }
 @media (min-width: 768px) {
   .popover {
@@ -6966,5 +6966,11 @@ header p {
 }
 header img {
   float: right;
-  padding: 10px 0 10px 0;
+  padding: 20px 0 0;
+}
+.top-only {
+  display: none !important;
+}
+.affix .top-only {
+  display: block !important;
 }
