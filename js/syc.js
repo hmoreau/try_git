@@ -112,7 +112,7 @@ $(document).ready(function() {
 		var retVal='';
 		$.ajax({
 			type: "GET",
-			url: "data/recommand.html",
+			url: "/data/recommand.html",
 			processData: true,
 			dataTypeString: 'html',
 			async: false
@@ -127,7 +127,7 @@ $(document).ready(function() {
 		var retVal='';
 		$.ajax({
 			type: "GET",
-			url: "data/recommand-title.html",
+			url: "/data/recommand-title.html",
 			processData: true,
 			dataTypeString: 'html',
 			async: false
