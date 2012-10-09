@@ -2596,7 +2596,7 @@ input[type="button"].btn-block {
   background-image: linear-gradient(to bottom,#08c,#0044cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0043cc', GradientType=0);
-  border-color: #0044cc #0044cc #002a80;
+  border-color: #0044cc #0044cc #002b80;
   border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
   *background-color: #0044cc;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2608,7 +2608,7 @@ input[type="button"].btn-block {
 .btn-primary[disabled] {
   color: #fff;
   background-color: #0044cc;
-  *background-color: #003bb3;
+  *background-color: #003cb3;
 }
 .btn-primary:active,
 .btn-primary.active {
