@@ -175,18 +175,19 @@ body{
 }
 
 header{
-    background:	url("/img/fotolia_37491085-min1.jpg") repeat-x scroll center right transparent;
+    background:	url("/img/fotolia_37491085-min1.jpg") repeat-x scroll center left transparent;
     top:0px;
     color: @textColor !important;
 }
 header .brand{
     color: @textColor !important;	
     text-shadow: 2px 2px 10px @textColor;
-    margin-top: 20px;
+    margin: 20px 20px;
     font-weight: bold;
 }
 header p{
-    padding: 30px 0 0 0;
+	margin: 0;
+    padding: 10px 0 0 20px;
     color:@colorS1;
     font-family: 'Quicksand', sans-serif;
     font-weight:bold;
@@ -194,6 +195,15 @@ header p{
     text-shadow: 0px 2px 5px @textColor;
     
 }
+header .container{
+	width:100%
+}
+
+header img {
+    float:right;
+    padding: 20px 0 0;
+}
+
 .affix {
   position: relative;
 }
@@ -208,10 +218,7 @@ header p{
     padding-top: 80px;
 }
 
-header img {
-    float:right;
-    padding: 20px 0 0;
-}
+
 .top-only{
     display:none !important;
 }
