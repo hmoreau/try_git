@@ -6982,7 +6982,7 @@ header .container {
 }
 header img {
   float: right;
-  padding: 20px 0 0;
+  padding: 20px 20px 0;
 }
 .affix {
   position: relative;
@@ -7015,4 +7015,10 @@ header img {
 }
 .new-update span.label {
   display: inline;
+}
+.classified .update-done img {
+  float: right;
+}
+.update-done {
+  width: 100%;
 }
