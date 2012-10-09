@@ -30,8 +30,8 @@
 			<!-- Tab nav -->
 			<div class="tabs-below tabs-shake visible-desktop visible-tablet">
 				<ul class="nav nav-tabs">
-					<li><a href="#tab1" data-toggle="tab"><i class="icon-user"></i> Mon profil</a></li>
-					<li class="active"><a href="#tab2" data-toggle="tab"><i class="icon-bookmark"></i> Accueil</a></li>
+					<li class="active"><a href="#tab1" data-toggle="tab"><i class="icon-user"></i> Mon profil</a></li>
+					<li><a href="#tab2" data-toggle="tab"><i class="icon-bookmark"></i> Accueil</a></li>
 					<li><a href="#tab3" data-toggle="tab"><i class="icon-road"></i> Covoiturage</a></li>
 					<li><a href="#tab4" data-toggle="tab"><i class="icon-home"></i> Logements</a></li>
 					<li><a href="#tab5" data-toggle="tab"><i class="icon-shopping-cart"></i> Vente de biens</a></li>
@@ -43,10 +43,10 @@
 		<div class="tabbable"  id="generalcontent">
 			<!-- Content -->
 			<div class="tab-content content">
-				<div class="tab-pane" id="tab1">
+				<div class="tab-pane active" id="tab1">
 					<?php include 'profile.php'; ?>
 				</div>
-				<div class="tab-pane active" id="tab2">
+				<div class="tab-pane" id="tab2">
 					<?php include 'home.php'; ?>
 				</div>
 				<div class="tab-pane" id="tab3">
