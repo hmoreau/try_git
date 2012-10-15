@@ -2,6 +2,21 @@ function DateDiff(date1, date2) {
 	var datediff = date1.getTime() - date2.getTime(); //store the getTime diff - or +
 	return (datediff / (24*60*60*1000)); //Convert values to -/+ days and return value      
 }
+
+function navigate(tab,url){
+	$.ajax({
+			type: "GET",
+			url: url,
+			processData: true,
+			dataTypeString: 'html',
+			async: true
+		}).done(function(data, textStatus, jqXHR) { 
+			$('#'+tab).html(data);
+			$('#nav-'+tab+ ' a').tab('show');
+		});
+	return false;
+}
+
 $(document).ready(function() {
 
 	/* Tab nav */
