@@ -69,6 +69,7 @@
 		</div>
 	</div>
     <script type='text/javascript' src="/js/jquery.min.js"></script>
+	<script type='text/javascript' src="/js/jquery.address-1.4.js"></script>
 	<script type='text/javascript' src='/js/fullcalendar.js'></script>
     <script type='text/javascript' src="/js/bootstrap.js"></script>
 	<script type='text/javascript' src="/js/syc.js"></script>

@@ -11,6 +11,7 @@ function navigate(tab,url){
 			dataTypeString: 'html',
 			async: true
 		}).done(function(data, textStatus, jqXHR) { 
+			$.address.value(url);
 			$('#'+tab).html(data);
 			$('#nav-'+tab+ ' a').tab('show');
 		});
@@ -19,11 +20,16 @@ function navigate(tab,url){
 
 $(document).ready(function() {
 
+	$.address.externalChange(function(event) {  
+		//
+	});
+
 	/* Tab nav */
 	// detect tab change
 
 		$('a[data-toggle="tab"]').on('shown', function (e) {
 		  //alert(e.relatedTarget+ ' ->' +e.target);
+		  //$.address.value(e.target);
 		   $('#calendar').fullCalendar('render');
 		})
 
